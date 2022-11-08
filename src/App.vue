@@ -1,18 +1,43 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <HeaderComponents />
   <router-view/>
 </template>
 
+<script>
+import HeaderComponents from '@/components/HeaderComponents.vue'
+
+export default {
+  components: {
+    HeaderComponents,
+  },
+}
+</script>
+
+
 <style lang="scss">
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  overflow: hidden;
 }
 
 nav {
@@ -27,4 +52,5 @@ nav {
     }
   }
 }
+
 </style>
